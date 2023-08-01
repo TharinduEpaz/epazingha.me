@@ -2,7 +2,7 @@ import { Environment, Sky, ContactShadows } from "@react-three/drei";
 import { Avatar } from "./Avatar";
 import { Desk } from "./Desk";
 import { AmbientLight, Mesh } from "three";
-import { useControls } from "leva";
+// import { useControls } from "leva";
 import { motion } from "framer-motion-3d";
 import { useThree } from "@react-three/fiber";
 import { Stool } from "./Stool";
@@ -24,12 +24,12 @@ export const Experience = (props) => {
     , 700);
   }, [section]);
 
-  const { animation } = useControls({
-    animation: {
-      value: "Typing",
-      options: ["Typing", "Falling", "Standing"],
-    },
-  });
+  // const { animation } = useControls({
+  //   animation: {
+  //     value: "Typing",
+  //     options: ["Typing", "Falling", "Standing"],
+  //   },
+  // });
 
   return (
     <>

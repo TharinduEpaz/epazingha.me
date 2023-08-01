@@ -6,17 +6,17 @@ Command: npx gltfjsx@6.2.10 public/models/64bbb4284e1697f144eda2b5.glb
 import React, { useEffect, useRef } from "react";
 import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { useControls } from "leva";
+// import { useControls } from "leva";
 import * as THREE from "three";
 
 export function Avatar(props) {
   const { animation } = props;
 
-  const { headFollow, cursorFollow, wireFrame } = useControls({
-    headFollow: false,
-    cursorFollow: false,
-    wireFrame: false 
-  });
+  // const { headFollow, cursorFollow, wireFrame } = useControls({
+  //   headFollow: false,
+  //   cursorFollow: false,
+  //   wireFrame: false 
+  // });
 
   const group = useRef();
   const { nodes, materials } = useGLTF("models/64bbb4284e1697f144eda2b5.glb");
@@ -35,16 +35,16 @@ export function Avatar(props) {
   const { actions } = useAnimations([typingAnimation[0],standingAnimation[0],fallingAnimation[0]], group);
   console.log(typingAnimation);
 
-  useFrame((state) => {
-    if (headFollow) {
-      group.current.getObjectByName("Head").lookAt(state.camera.position);
-    }
+  // useFrame((state) => {
+  //   if (headFollow) {
+  //     group.current.getObjectByName("Head").lookAt(state.camera.position);
+  //   }
 
-    if (cursorFollow) {
-      const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
-      group.current.getObjectByName("Spine2").lookAt(target);
-    }
-  });
+  //   if (cursorFollow) {
+  //     const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
+  //     group.current.getObjectByName("Spine2").lookAt(target);
+  //   }
+  // });
 
   useEffect(() => {
     actions[animation].reset().fadeIn(0.5).play();
@@ -54,11 +54,11 @@ export function Avatar(props) {
     }
   }, [animation]);
 
-  useEffect(()=>{
-    Object.values(materials).forEach((material)=>{
-        material.wireframe = wireFrame;
-    });
-  },[wireFrame]);
+  // useEffect(()=>{
+  //   Object.values(materials).forEach((material)=>{
+  //       material.wireframe = wireFrame;
+  //   });
+  // },[wireFrame]);
 
 
   return (
