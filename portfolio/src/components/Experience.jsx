@@ -10,7 +10,7 @@ import { useEffect,useState } from "react";
 import { Husky } from "./Husky";
 
 export const Experience = (props) => {
-  const { section } = props;
+  const { section} = props;
   const { viewport } = useThree();
   
   const [characterAnimation, setCharacterAnimation] = useState("Typing"); 

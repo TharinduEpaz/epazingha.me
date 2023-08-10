@@ -12,7 +12,7 @@ function App() {
   
   return (
     <>
-    <Navbar />
+    <Navbar section={section} setSection={setSection}/>
     <Canvas shadows camera={{ position: [0, 0, 5], fov: 30 }}>
       <color attach="background" args={["#ececec"]} />
       
@@ -20,13 +20,13 @@ function App() {
       <ScrollControls pages={4} damping={0.1}>
       <ScrollManager section={section} setSection={setSection} />
       <Scroll>
-      <Experience section={section} />
+      <Experience section={section} setSection={setSection} />
       
       </Scroll>
      
       <Scroll html>
       
-      <Interface />
+      <Interface section={section} setSection={setSection}/>
       </Scroll>
       </ScrollControls>
     </Canvas>

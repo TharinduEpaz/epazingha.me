@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Timeline from "./Timeline";
 
 const Section = (props) => {
-  const { children } = props;
+  const { children} = props;
 
   return (
     <motion.section
@@ -20,6 +20,7 @@ const Section = (props) => {
 };
 
 export const Interface = () => {
+  
   return (
     <div className="flex flex-col items-center w-screen">
       <Section>
