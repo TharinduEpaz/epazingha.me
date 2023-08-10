@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Timeline from "./Timeline";
 
 const Section = (props) => {
   const { children } = props;
@@ -25,15 +26,10 @@ export const Interface = () => {
         <AboutSection />
       </Section>
       <Section>
-        <SkillsSection name={"JavaScript"} percentage={90} />
-        <SkillsSection name={"C/C++"} percentage={45} />
-        <SkillsSection name={"Python"} percentage={45} />
-        <SkillsSection name={"Java"} percentage={45} />
-        <SkillsSection name={"Mongo DB"} percentage={45} />
-        <SkillsSection name={"Postgres"} percentage={45} />
-        <SkillsSection name={"Python"} percentage={45} />
-        <SkillsSection name={"Django"} percentage={45} />
-        <SkillsSection name={"C++"} percentage={45} />
+        {/* <SkillsSection name={"JavaScript"} percentage={90} /> */}
+
+        <Timeline />
+      
       </Section>
       <Section>
         <h1>Projects</h1>
