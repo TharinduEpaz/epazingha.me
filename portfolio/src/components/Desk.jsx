@@ -9,7 +9,7 @@ import { useGLTF } from '@react-three/drei'
 export function Desk(props) {
   const { nodes, materials } = useGLTF('models/Desk.glb')
   return (
-    <group {...props} dispose={null}  position-y={0.4} position-x={1} position-z={0} rotation-y={2}>
+    <group {...props} dispose={null}  position-y={0.6} position-x={1} position-z={0} rotation-y={2}>
       <mesh geometry={nodes.group1983538.geometry} material={materials.mat21} />
       <mesh geometry={nodes.group1716067366.geometry} material={materials.mat21} />
       <mesh geometry={nodes.group2099217571.geometry} material={materials.mat21} />

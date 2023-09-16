@@ -8,8 +8,8 @@ export const ScrollManager = ({ section, setSection }) => {
   const lastScroll = useRef(0);
   const isAnimating = useRef(false);
 
-  data.fill.classList.add("top-0"); 
-  data.fill.classList.add("absolute");
+  // data.fill.classList.add("top-0"); 
+  // data.fill.classList.add("absolute");
 
   useEffect(() => {
     gsap.to(data.el,{

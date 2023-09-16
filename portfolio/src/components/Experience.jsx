@@ -48,7 +48,7 @@ export const Experience = (props) => {
     transition={{ duration: 1 }}
 
     >
-    <Avatar animation={characterAnimation} position={[0.25,-1,0]} rotation-z={0.5} />
+    <Avatar animation={characterAnimation} position={[0.25,-0.8,0]} rotation-z={0.5} />
     </motion.group>
       <Sky />
       <Environment preset="sunset" />
@@ -58,6 +58,7 @@ export const Experience = (props) => {
           scale={10}
           blur={1}
           far={10}
+          position={[0, 0.1, 0]}
           resolution={256}
           color="#000000"
         />
