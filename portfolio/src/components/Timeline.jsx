@@ -16,7 +16,7 @@ function Timeline() {
   return (
     <>
       {/* <h1 class="mb-10 text-9xl font-extrabold text-gray-600 absolute"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-500 from-sky-400">Skills</span> & Experience.</h1> */}
-     <div style={{height:'100vh'}}>
+     
       <VerticalTimeline layout="1-column-left" >
         <VerticalTimelineElement
           contentStyle={{
@@ -98,7 +98,7 @@ function Timeline() {
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
-      </div>
+   
     </>
   );
 }

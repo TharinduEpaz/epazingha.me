@@ -64,7 +64,7 @@ export const Experience = (props) => {
         />
         <Desk />
         <Stool />
-        <Husky />
+        {/* <Husky /> */}
         {/* <Avatar animation={animation} />
         {animation === "Typing" && (
           <mesh scale={[0.8, 0.5, 0.8]} position-y={0.25}>
